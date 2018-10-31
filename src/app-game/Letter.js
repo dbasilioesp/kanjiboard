@@ -5,7 +5,7 @@ class Letter extends React.Component {
     return (
       <span
         className={this.props.active}
-        onClick={e => this.props.onViewKanji(this.props.value)}
+        onClick={e => this.props.onSelectKanji(this.props.value)}
       >{this.props.value}</span>
     );
   }

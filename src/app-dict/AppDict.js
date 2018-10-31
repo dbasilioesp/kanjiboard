@@ -1,19 +1,16 @@
 import React from "react";
-import "./App.scss";
-
-import gradesJson from '../data/grades.json';
-
+import GRADES from '../data/grades.json';
 import Grade from './Grade';
 import Nav from './Nav';
 import Aside from './Aside';
 
-class App extends React.Component {
+class AppDict extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       index: 0,
       kanji: {
-        word: gradesJson.grades[0][0],
+        word: GRADES.grades[0][0],
         active: true
       }
     };
@@ -40,7 +37,7 @@ class App extends React.Component {
   render() {
     const { index, kanji } = this.state;
     return (
-      <div className="app">
+      <div className="app-dict">
         <Aside kanji={this.state.kanji} />
         <div>
           <Nav onChangeGrade={this.changeGrade} />
@@ -51,4 +48,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default AppDict;

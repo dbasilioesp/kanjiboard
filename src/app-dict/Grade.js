@@ -1,14 +1,15 @@
 import React from "react";
 import Letter from './Letter';
-import gradesJson from '../data/grades.json';
+import GRADES from '../data/grades.json';
 
 class Grade extends React.Component {
   render() {
-    let grade = gradesJson.grades[this.props.index];
+    let grade = GRADES.grades[this.props.index];
     let gradeList = [];
 
     for (var i = 0; i < grade.length; i++) {
       let item = grade.charAt(i);
+
       if (item !== " ") {
         let isActive = this.props.kanji.word === item ? "active" : "";
         gradeList.push(<Letter
