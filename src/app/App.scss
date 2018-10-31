@@ -14,11 +14,14 @@
 
   span {
     cursor: pointer;
-    margin: 3px 0;
-    padding: 0px 7px;
+    margin: 5px;
     display: inline-block;
     transition: background 300ms;
     border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
+    padding: 2px 5px;
   }
 
   span.active {
@@ -28,6 +31,7 @@
 
 .nav {
   margin-bottom: 20px;
+
   button {
     font-size: 18px;
     background: tomato;
@@ -39,22 +43,29 @@
   }
 }
 
-.app-container {
-  display: flex;
-}
-
 .aside {
-  font-size: 80px;
   display: flex;
-  height: 250px;
-  width: 300px;
+  width: 150px;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   opacity: 0.3;
-  transform: scale(0.3);
+  transform: scale(0.5);
+  margin-right: 50px;
+  margin-top: 50px;
+  text-align: center;
+
+  .aside__word {
+    font-size: 80px;
+    font-weight: 300;
+  }
+
+  .aside__meaning {
+    margin-top: 10px;
+  }
 
   &.active {
-    animation: reveal 800ms forwards;
+    animation: reveal 500ms forwards;
   }
 
   @keyframes reveal {
